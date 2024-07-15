@@ -1,10 +1,20 @@
 import './App.css';
 import mercatorImage from './images/mercator.jpg';
+import React, {useState} from 'react';
 
 
 function App() {
 
-  const countries = ['Cambodia', 'France', 'Germany', 'Vietnam'];
+  const countries = ['Austria', 'Cambodia', 'France', 'Germany', 'Tanzania', 'Vietnam'];
+  const cities = ['Beijing', 'London', 'Paris', 'Tokyo'];
+  const territories = ['Puerto Rico', 'Hong Kong', 'Macau', 'Zanzibar'];
+  const landmarks = ['Angkor Wat', 'Eiffel Tower', 'Great Wall of China', 'Colosseum'];
+  const places = {countries, cities, territories, landmarks};
+
+  const [currentList, setList] = useState('countries');
+  const listChange = (listName) => {
+    setList(listName);
+  };
 
   return (
     <div className="dashboard">
@@ -20,15 +30,19 @@ function App() {
       <body className="dashboard-body">
 
       <img src={mercatorImage} alt="Map" className="mercator-pic" />
+
+      <div className="buttons-container">
+          <button className="list-button" onClick={() => listChange('countries')}>Countries</button>
+          <button className="list-button" onClick={() => listChange('cities')}>Cities</button>
+          <button className="list-button" onClick={() => listChange('territories')}>Territories</button>
+          <button className="list-button" onClick={() => listChange('landmarks')}>Landmarks</button>
+        </div>
       
-      <div className="countries-title-container">
-        <h2 className="countries-title"> Countries </h2>
-      </div>
       <ul className="countries-list">
-        {countries.map((country, index) => (
-          <li key={index}>
-            <button className="countries-button">{country}</button>
-          </li>
+        {places[currentList].map((item, index) => (
+            <li key={index}>
+              <button className="countries-button">{item}</button>
+            </li>
         ))}
       </ul>
 
