@@ -5,8 +5,7 @@
 
 /* header */
 .dashboard-header {
-  background-color: #afcdeb;
-  min-height: 10vh;
+  background-color: #eaedf0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +17,32 @@
 .user-travels {
   align-self: flex-start;
   margin-left: 30px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.add-travels-button {
+  position: absolute;
+  right: 30px;
+  background-color: #dfe2e5;
+  color: black;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+}
+
+.add-travels-button:hover {
+  background-color: #eaedf0;
 }
 
 /* body */
 .dashboard-body {
-  background-color: #afcdeb;
+  width: 100%;
   min-height: 10vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
@@ -35,22 +52,50 @@
 .mercator-pic {
   width: 50%;
   height: auto;
-  margin-top: 20px;
+}
+
+.countries-title-container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .countries-title {
+  width: 100%;
+  padding: 10px 0;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: #dfe2e5;
+  font-family: Georgia, serif;
 }
 
-.country-list {
+.countries-list {
   list-style-type: none;
   padding: 0;
-  text-align: left;
-  margin-top: 5px; /* spacing from map */
+  margin: 0;
+  width: 100%;
+  font-family: Georgia, serif;
 }
 
-.country-list li {
-  margin: 2px 0; /* spacing between list items */
+.countries-list li {
+  width: 100%;
+  text-align: center;
+}
+
+.countries-button {
+  width: calc(100% - 40px);
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #eaedf0;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.countries-button:hover {
+  background-color: #dde5ed;
 }
