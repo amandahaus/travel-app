@@ -1,13 +1,27 @@
-.App {
+
+.dashboard {
   text-align: center;
 }
 
-.UserName-Travels {
+/* header */
+.dashboard-header {
+  background-color: #afcdeb;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: #000000;
+}
+
+.user-travels {
   align-self: flex-start;
   margin-left: 30px;
 }
 
-.App-header {
+/* body */
+.dashboard-body {
   background-color: #afcdeb;
   min-height: 10vh;
   display: flex;
@@ -18,21 +32,10 @@
   color: #000000;
 }
 
-.App-mercator {
+.mercator-pic {
   width: 50%;
   height: auto;
   margin-top: 20px;
-}
-
-.App-body {
-  background-color: #afcdeb;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(12px + 2vmin);
-  color: #000000;
 }
 
 .countries-title {
