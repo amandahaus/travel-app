@@ -49,9 +49,11 @@
   color: #000000;
 }
 
-.mercator-pic {
+.map-container {
   width: 50%;
-  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons-container {
@@ -79,7 +81,7 @@
 }
 
 .list-button:hover {
-  background-color: #0056b3;
+  background-color: #405b9b
 }
 
 .countries-list {
