@@ -1,4 +1,4 @@
-import './App.css';
+import './dashboard.css';
 import React from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { useState } from 'react';
@@ -6,7 +6,7 @@ import { allCityCoords } from './geoData/cities';
 
 const geoUrl = "https://unpkg.com/world-atlas@2.0.2/countries-110m.json"
 
-function App() {
+function Dashboard() {
 
   const countries = ['Austria', 'Cambodia', 'Canada', 'Costa Rica', 'France', 'Germany', 'Mexico', 'Netherlands', 'Tanzania', 'United Kingdom', 'United States of America', 'Vietnam'];
   const cities = ['Beijing', 'London', 'Los Angeles', 'Paris', 'Tokyo'];
@@ -87,4 +87,4 @@ function App() {
   );
 }
 
-export default App;
+export default Dashboard;
