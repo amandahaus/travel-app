@@ -15,20 +15,8 @@ function Dashboard() {
   const places = {countries, cities, territories, landmarks};
 
   const [currentList, setList] = useState('countries');
-  const [highlightedCountries, setHighlightedCountries] = useState([]);
-  const [showCities, setShowCities] = useState('cities');
-
   const listChange = (listName) => {
     setList(listName);
-    if (listName === 'countries') {
-      setHighlightedCountries(places.countries);
-    }
-    else {
-      setHighlightedCountries([]);
-    }
-    if (listName === 'cities') {
-      setShowCities(places.cities);
-    }
   };
 
   return (
@@ -52,18 +40,17 @@ function Dashboard() {
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill={highlightedCountries.includes(geo.properties.name) ? '#405b9b':"#eaedf0"}
+                fill={places.countries.includes(geo.properties.name) ? '#405b9b':"#eaedf0"}
                 stroke="#FFFFFF"
               />
             ))
           }
         </Geographies>
-        {showCities && allCityCoords.map((city, index) => (
-          cities.find(c => c.name === city.name) && (
+        {allCityCoords.map((city, index) => (
           <Marker key={index} coordinates={city.coordinates}>
             <circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} />
           </Marker>
-        )))}
+        ))}
       </ComposableMap>
       </div>
 
