@@ -8,5 +8,4 @@ export const allCityCoords = [
     { name: "Sydney", coordinates: [151.2093, -33.8688] },
     { name: "Moscow", coordinates: [37.6173, 55.7558] },
     { name: "Berlin", coordinates: [13.4050, 52.5200] },
-    { name: "Rio de Janeiro", coordinates: [-43.1729, -22.9068] },
   ];
