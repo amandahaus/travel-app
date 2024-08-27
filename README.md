@@ -1,5 +1,5 @@
 **Travel Tracker App**
-(official name to be announced)
+(official name tbd)
 
 The traveler's tracking app.  An application to keep tabs on your visited countries, cities, territories, landmarks, and more!
 
